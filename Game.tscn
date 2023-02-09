@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=1]
 [ext_resource path="res://Asteroids/Asteroid_Container.gd" type="Script" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://Planets/LavaWorld/LavaWorld.tscn" type="PackedScene" id=7]
 [ext_resource path="res://UI/Camera.gd" type="Script" id=8]
 [ext_resource path="res://Weapons/Buffs_Container.gd" type="Script" id=9]
+[ext_resource path="res://assets/HyperspaceBold.ttf" type="DynamicFontData" id=10]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 10 )
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 50.0
@@ -45,6 +55,7 @@ color = Color( 0, 0, 0, 0.254902 )
 [node name="Score" type="Label" parent="UI/HUD"]
 margin_right = 256.0
 margin_bottom = 40.0
+custom_fonts/font = SubResource( 2 )
 text = "Score:"
 valign = 1
 
@@ -54,6 +65,7 @@ anchor_right = 1.0
 margin_left = -768.0
 margin_right = -512.0
 margin_bottom = 40.0
+custom_fonts/font = SubResource( 3 )
 text = "Lives:"
 valign = 1
 
@@ -62,6 +74,7 @@ anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -256.0
 margin_bottom = 40.0
+custom_fonts/font = SubResource( 4 )
 text = "Lives:"
 valign = 1
 
