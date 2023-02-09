@@ -62,7 +62,7 @@ var levels = [
 		'enemies_spawned': false,
 		'Mov_enemies_spawned': false,
 		'Mov_enemies': [Vector2(1,200)],
-		'shieldpos':[Vector2(2000,1000), Vector2(2000,2000), Vector2(777,1952), Vector2(3557,512)],
+		'shieldpos':[Vector2(2000,2000), Vector2(777,1952), Vector2(3557,512)],
 		'shield_spawned': false,
 		'lifeup_spawned': false,
 		'lifeup_pos': [Vector2(2000, 50)]
@@ -112,11 +112,22 @@ func reset():
 	for l in levels:
 		l['asteroids_spawned'] = false
 		l['enemies_spawned'] = false
+		l['Mov_enemies_spawned'] = false
 		l['shield_spawned'] = false
+		l['lifeup_spawned'] = false
 		
-func _unhandled_input(_event):
-	if Input.is_action_pressed("quit"):
-		get_tree().quit()
+func _unhandled_input(event):
+	if event.is_action_pressed("menu"):
+		var Pause_Menu = get_node_or_null('/root/Game/UI/Pause_Menu')
+		if Pause_Menu == null :
+			get_tree().quit()
+		else :
+			if Pause_Menu.visible:
+				Pause_Menu.hide()
+				get_tree().paused = false
+			else:
+				Pause_Menu.show()
+				get_tree().paused = true
 
 func _resize():
 	VP = Vector2(4000,3000)

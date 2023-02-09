@@ -14,7 +14,7 @@ func _physics_process(_delta):
 		global_position = center
 		var vp_size = get_viewport().size.length()
 		var pdistance = p1 - p2
-		var z = clamp(pdistance.length()*2.1/vp_size, 1, 3)
+		var z = clamp(pdistance.length()*2.1/vp_size, 1.75, 3)
 		zoom = Vector2(z,z)
 	elif Player1 != null and Player2 == null:
 		global_position = Player1.global_position
