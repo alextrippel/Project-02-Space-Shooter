@@ -1,6 +1,7 @@
-# Project 02 : Space Shooter
-Context and date
-Project for MSCH-C220 2/8/2023 by Alexander Trippel
+## Project 02 : Space Shooter
+
+## Context and date
+Project for MSCH-C220 2/9/2023 by Alexander Trippel
 
 Description
 A basic two player space shooter arcade game, created in Gadot. Includes features such as 5 different levels, two different enemies, four planets with gravitational pull, shields that recharge on respawn or obtaining a powerup, particle effects on destroying a large asteroid, and an extra life powerup.
